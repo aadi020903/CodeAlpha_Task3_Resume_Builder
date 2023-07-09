@@ -1,0 +1,29 @@
+#cv-form
+{
+   
+}
+#cv-template
+{
+    display: none;
+}
+.myimg
+{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background
+{
+    background-color: rgb(255, 191, 127);
+}
+
+.big-size
+{
+    font-size: 35px;
+    
+}
+.small-size
+{
+    font-size: 10px;
+    
+}

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Builder By Aadi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+<body>
+    
+      <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center ">ATS friendly resume with Aditya Sharma</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <!-- first col -->
+            <h3>Personal Information</h3>
+
+              <div class="form-group ">
+                
+                <label for="nameField">Your Name</label>
+                <input type="text" id="nameField" placeholder="Name Here" class="form-control">
+            
+              </div>
+              <!--  -->
+              <div class="form-group mt-2">
+                
+                <label for="contactField">Your Contact</label>
+                <input type="text" id="contactField" placeholder="Number Here" class="form-control">
+            
+              </div>
+              <!--  -->
+              <div class="form-group mt-2">
+                
+                <label for="addressField">Your Address Here</label>
+                <textarea id="addressField" placeholder="Your Address" class="form-control" rows="3"></textarea>
+            
+              </div>
+
+              <div class="form-group mt-3">
+                <label for="">Upload profile :</label>
+                <input type="file" class="form-control" id="upField">
+              </div>
+
+
+              <!--  -->
+              <p class="text-secondary my-3">Required Links</p>
+              <div class="form-group mt-2">
+                
+                <label for="LInField">LinkedIn</label>
+                <input type="text" id="LInField" placeholder="LinkedIn Link" class="form-control">       
+              </div>
+              <div class="form-group mt-2">
+                
+                <label for="GitField">GitHub</label>
+                <input type="text" id="GitField" placeholder="Github Link" class="form-control">         
+              </div>
+              <div class="form-group mt-2">
+                
+                <label for="EmailField">Email</label>
+                <input type="email" id="EmailField" placeholder="Email Address" class="form-control">
+            
+              </div>
+
+          </div>
+          <div class="col-md-6">
+            <!-- second col -->
+            <h3>Personal Information</h3>
+
+            <div class="form-group mt-2">
+                
+              <label for="">Summary</label>
+              <textarea placeholder="About You" class="form-control" rows="3" id="summaryField"></textarea>
+          
+            </div>
+
+            <div class="form-group mt-2" id="we">
+                
+              <label for="">Expirence</label>
+              <textarea placeholder="Your Expirence Here" class="form-control weField"></textarea>
+          
+            
+
+            <!-- new text area  -->
+            <div class="container text-center mt-2" id="weaddbutton">
+              <button onclick="addNeWweField()" class="btn btn-primary btn-sm">Add +</button>
+            </div>
+
+          </div>
+
+            <div class="form-group mt-2" id="eq">
+                
+              <label for="">Acadmic Qualification</label>
+              <textarea placeholder="Your Qualification Here" class="form-control eqField"></textarea>
+          
+           
+            <div class="container text-center mt-2" id="eqaddbutton">
+              <button onclick="addNeWeqField()" class="btn btn-primary btn-sm">Add +</button>
+            </div>
+          </div>
+            <div class="form-group mt-2" id="ce">
+                
+              <label for="">Certificates</label>
+              <textarea placeholder="Your Certificates Here" class="form-control ceField"></textarea>
+          
+            
+            <div class="container text-center mt-2" id="ceaddbutton">
+              <button onclick="addNeWceField()" class="btn btn-primary btn-sm">Add +</button>
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+
+
+          <div class="container text-center mt-3 ">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+          </div>
+      </div>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+      <!-- cv template -->
+
+      <div class="container" id="cv-template">
+
+        <div class="row">
+          <div class="col-md-4 text-center py-5 background">
+            <!-- first column -->
+                
+              <img src="images.png" alt="" class="img-fluid myimg" id="upT">
+                
+                
+                <div class="container">
+
+                  <p id="nameT1">XYZ</p>
+                  <p id="contactT">+91 7877705896 , +91 9090909090</p>
+                  <p id="addressT">Alwar, Alwar,Rajasthan , India</p>
+
+                  <hr>
+
+                  <p>
+                    <i class="fa fa-envelope"> </i> <a id="MT" href="#3"  class="small-size"> a</a>
+                  </p>
+                  <p>
+                    <i class="fa fa-brands fa-linkedin"> </i> <a id="LINT" href="#1" class="small-size"> a</a>
+                  </p>
+                  <p>  
+                    <i class="fa fa-brands fa-github"> </i> <a id="GitT" href="#2"class="small-size" > a</a>
+
+
+                  </p>
+                </div>
+
+
+                <!-- Acadmics  -->
+                <div class="card mt-4">
+                  <div class="card-header " style="background-color:rgb(255, 171, 103);">
+                    <h3>Academic Qualification</h3>
+                  </div>
+                    <div class="card-body">
+                      <ul id="eqT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                      
+                    
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                      
+                    
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                      </ul>
+                      </div>
+                </div>
+          </div>
+            
+          <div class="col-md-8 py-5">
+            <!-- second column -->
+
+            <h1 id="nameT2" class="text-center" style="font-weight: 980;">Aditya Sharma</h1>
+
+            <!-- objective card -->
+
+              <div class="card mt-4">
+                <div class="card-header background">
+                  <h3>Summary</h3>
+                </div>
+                  <div class="card-body">
+                    <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae, possimus sapiente exercitationem odio quis in tenetur cum doloribus tempore incidunt, ad accusantium dicta dolorum beatae nam earum sint non.</p>
+                  </div>
+              </div>
+
+
+
+              <!--  Work Expirence  -->
+
+              <div class="card mt-4">
+                <div class="card-header background">
+                  <h3>Expirence</h3>
+                </div>
+                  <div class="card-body">
+                    <ul id="weT">
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                    
+                    
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                    
+                    
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                    </ul>
+                    </div>
+              </div>
+
+
+              <!-- Certificates -->
+              <div class="card mt-4">
+                <div class="card-header background">
+                  <h3>Certificates</h3>
+                </div>
+                  <div class="card-body">
+                    <ul id="ceT">
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                    
+                  
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                    
+                  
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, excepturi.</li>
+                    </ul>
+                    </div>
+              </div>
+
+            
+
+              <div class="container mt-3 text-center" >
+                  <button onclick="PrintCV()" class="btn background big-size">Print</button>
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
